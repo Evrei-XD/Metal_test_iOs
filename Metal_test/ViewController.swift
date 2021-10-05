@@ -30,15 +30,9 @@ class ViewController: UIViewController {
         device = metalView.device
         
         metalView.clearColor = Colors.wenderlichGreen
+        metalView.delegate = self
         
         commandQueue = device.makeCommandQueue()
-        let commandBuffer = commandQueue.makeCommandBuffer()
-        
-        let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: metalView.currentRenderPassDescriptor!)
-        
-        commandEncoder?.endEncoding()
-        commandBuffer?.present(metalView.currentDrawable!)
-        commandBuffer?.commit()
     }
 }
 
@@ -46,7 +40,19 @@ extension ViewController: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) { }
     
     func draw(in view: MTKView) {
+        guard  let drawable = view.currentDrawable,
+               let descriptor = view.currentRenderPassDescriptor else {
+            return
+        }
         
+        let commandBuffer = commandQueue.makeCommandBuffer()
         
+        let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: descriptor)
+        
+        commandEncoder?.endEncoding()
+        commandBuffer?.present(drawable)
+        commandBuffer?.commit()
     }
+    
+    
 }
