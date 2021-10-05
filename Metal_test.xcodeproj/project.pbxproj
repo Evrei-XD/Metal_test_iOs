@@ -13,6 +13,8 @@
 		65086535270C420000B320DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65086533270C420000B320DA /* Main.storyboard */; };
 		65086537270C420100B320DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65086536270C420100B320DA /* Assets.xcassets */; };
 		6508653A270C420100B320DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65086538270C420100B320DA /* LaunchScreen.storyboard */; };
+		65086542270C578100B320DA /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65086541270C578100B320DA /* Renderer.swift */; };
+		65086544270C5AB400B320DA /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 65086543270C5AB400B320DA /* Shader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		65086536270C420100B320DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65086539270C420100B320DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6508653B270C420100B320DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65086541270C578100B320DA /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		65086543270C5AB400B320DA /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		6508652C270C420000B320DA /* Metal_test */ = {
 			isa = PBXGroup;
 			children = (
-				6508652D270C420000B320DA /* AppDelegate.swift */,
 				6508652F270C420000B320DA /* SceneDelegate.swift */,
+				6508652D270C420000B320DA /* AppDelegate.swift */,
 				65086531270C420000B320DA /* ViewController.swift */,
+				65086541270C578100B320DA /* Renderer.swift */,
+				65086543270C5AB400B320DA /* Shader.metal */,
 				65086533270C420000B320DA /* Main.storyboard */,
 				65086536270C420100B320DA /* Assets.xcassets */,
 				65086538270C420100B320DA /* LaunchScreen.storyboard */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65086542270C578100B320DA /* Renderer.swift in Sources */,
 				65086532270C420000B320DA /* ViewController.swift in Sources */,
 				6508652E270C420000B320DA /* AppDelegate.swift in Sources */,
+				65086544270C5AB400B320DA /* Shader.metal in Sources */,
 				65086530270C420000B320DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
