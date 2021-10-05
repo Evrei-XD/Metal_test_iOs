@@ -47,5 +47,6 @@ extension ViewController: MTKViewDelegate {
     
     func draw(in view: MTKView) {
         
+        
     }
 }
